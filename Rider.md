@@ -123,9 +123,11 @@ Now that Rider is configured, let's clone the **Intersect Engine** project from 
 Once you have cloned the Intersect Engine repository into your local environment, it’s time to compile the project.
 
 1. Open Rider's terminal:
+ 
 ![RiderTerminal](https://github.com/user-attachments/assets/c5cc8929-0e21-41f8-ba7e-6e1437437ac8)
 
 2. Run the following command: `git submodule update --init --recursive`
+
 ![enter image description here](https://github.com/user-attachments/assets/ccb13043-bf7d-4613-9959-8c50dd5ee421)
 
 3. Compile a Debug build: `dotnet build -p:Configuration=Debug -p:PackageVersion=0.8.0-beta -p:Version=0.8.0`
@@ -135,11 +137,15 @@ Once you have cloned the Intersect Engine repository into your local environment
    * Release builds will create single-file binary outputs, but to get a clean output, use `dotnet publish`.
 
 5. Compile a Publish build (Windows x64): `dotnet publish -p:Configuration=Release -p:PackageVersion=0.8.0-beta -p:Version=0.8.0 -r win-x64`
+
 ![CompilePublish](https://github.com/user-attachments/assets/99cc4010-5715-4e29-84a6-c642ccfb8536)
+
    Wait for projects to restore:
+   
 ![ProjectsRestore](https://github.com/user-attachments/assets/c6350ebf-efe9-416e-a0ce-a8dcf77a0669)
 
    Wait until `dotnet` finishes building the engine. If you reach this point without failure errors (usually displayed in red text), it means you have successfully built the Intersect Engine!
+   
 ![CompileDone](https://github.com/user-attachments/assets/f54b03d3-6f12-47f3-87ae-4f1ba320a341)
 
 ---
@@ -148,29 +154,33 @@ Once you have cloned the Intersect Engine repository into your local environment
 
 1. Download the latest assets from:
    https://github.com/AscensionGameDev/Intersect-Assets/tree/main_full
+   
 ![DownloadAssets](https://github.com/user-attachments/assets/161bd9c0-3c63-4690-bacc-9c7224288ecc)  
    Extract your assets to a location that's easy to manage, such as your desktop.
 
-2. In Rider, navigate to your client's publish build, right-click the Client project folder, and select "Open In" -> "Explorer":
+3. In Rider, navigate to your client's publish build, right-click the Client project folder, and select "Open In" -> "Explorer":
+
 ![RiderExplorer](https://github.com/user-attachments/assets/8f11ca7a-30d9-4664-9c62-70300e53624d)  
    Then, go to the following path:
    `C:\Users\Windows\RiderProjects\Intersect-Engine\Intersect.Client\bin\Release\net8.0\win-x64\publish`
 
-3. Within the mentioned path, you should find your compiled client:
+4. Within the mentioned path, you should find your compiled client:
+
 ![PublishFolder](https://github.com/user-attachments/assets/e5987c07-3507-427f-a922-27efd04cb08c)
 
-4. Move the `resources` folder from the previously downloaded assets:
+5. Move the `resources` folder from the previously downloaded assets:
+   
 ![pasteAssets](https://github.com/user-attachments/assets/8e6e2bb9-951d-4855-8679-fa99e17ecd20)
 
-5. Open the client, but you may get stuck on the updater:
-![UpdateStuck](https://github.com/user-attachments/assets/d68196f0-7fd2-40b7-b5bf-d5aa219f0004)
+6. Find and open the server from the path: `C:\Users\Windows\RiderProjects\Intersect-Engine\Intersect.Server\bin\Release\net8.0\win-x64\publish\Intersect Server.exe`
 
-7. If you are stuck on the updater, close the client. Then, go to `resources -> config.json` and delete the following from "UpdateUrl":
-![enter image description here](https://github.com/user-attachments/assets/c83541f9-8d0e-4a09-a093-3fa260c2fd67)  
-   Leave it like this, then save the file:
-![enter image description here](https://github.com/user-attachments/assets/96f1fba0-a4c3-4b12-92d6-49356ea6cdc2)
+![enter image description here](https://github.com/user-attachments/assets/1214d79b-b016-4c7e-ae67-aa73800b6773)
 
-8. Reopen the game client. Congratulations! You have successfully built your own version!
+![enter image description here](https://github.com/user-attachments/assets/e23e6609-8688-48aa-ad8b-ffc3118b34fd)
+
+7. Launch the game client from `Intersect.Client\bin\Release\net8.0\win-x64\publish\Intersect Client.exe`
+Congratulations! You have successfully built your own version!
+
 ![enter image description here](https://github.com/user-attachments/assets/9efb5e21-8714-4b43-b6d6-a7c3b6fa3a38)
 
 Good luck, and happy developing! 🙌
