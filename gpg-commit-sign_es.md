@@ -1,5 +1,5 @@
 
-# 🔐 Firma de Commits en Git con GPG
+# 🔐 Rider: Firma de Commits en Git con GPG
 
 ## 📥 Requisitos previos
 Necesitarás tener los siguientes programas instalados:
