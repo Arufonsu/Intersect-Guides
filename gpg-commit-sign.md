@@ -1,4 +1,4 @@
-# 🔐 Git Commit Signing with GPG
+# 🔐 Rider: Git Commit Signing with GPG
 
 ## 📥 Prerequisites
 You will need the following programs installed:
